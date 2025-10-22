@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: stockservice
+server:
+  http2:
+    enabled: true
+  port: 7070

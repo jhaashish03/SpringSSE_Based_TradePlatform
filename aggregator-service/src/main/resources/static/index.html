@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-nU14brUcp6StFntEOOEBvcJm4huWjB0OcIeQ3fltAfSmuZFrkAif0T+UtNGlKKQv" crossorigin="anonymous">
+
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+        .jumbotron {
+            background-color: #2d2d2d;
+            color: #ffffff;
+            border-bottom: 2px solid #444;
+        }
+        .card {
+            background-color: #2d2d2d;
+            border-color: #444;
+            color: #e0e0e0;
+        }
+        .card-header {
+            background-color: #1f1f1f;
+            border-color: #444;
+            color: #ffffff;
+        }
+        .card-body {
+            background-color: #2d2d2d;
+        }
+        .table {
+            color: #e0e0e0;
+            border-color: #444;
+        }
+        .table thead th {
+            background-color: #1f1f1f;
+            border-color: #444;
+            color: #ffffff;
+        }
+        .table tbody tr {
+            border-color: #444;
+        }
+        .table tbody tr:hover {
+            background-color: #3a3a3a;
+        }
+        .btn-success {
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+        .btn-success:hover {
+            background-color: #218838;
+            border-color: #218838;
+        }
+        .btn-warning {
+            background-color: #ffc107;
+            border-color: #ffc107;
+            color: #000;
+        }
+        .btn-warning:hover {
+            background-color: #e0a800;
+            border-color: #d39e00;
+        }
+        .alert {
+            background-color: #2d2d2d;
+            border-color: #444;
+            color: #e0e0e0;
+        }
+        .alert-danger {
+            background-color: #3d1f1f;
+            border-color: #8b3a3a;
+            color: #ff6b6b;
+        }
+        .alert-success {
+            background-color: #1f3d1f;
+            border-color: #3a8b3a;
+            color: #51cf66;
+        }
+        .text-success {
+            color: #51cf66 !important;
+        }
+        .text-danger {
+            color: #ff6b6b !important;
+        }
+        .form-control {
+            background-color: #3a3a3a;
+            border-color: #444;
+            color: #e0e0e0;
+        }
+        .form-control:focus {
+            background-color: #3a3a3a;
+            border-color: #666;
+            color: #e0e0e0;
+        }
+        .form-select {
+            background-color: #3a3a3a;
+            border-color: #444;
+            color: #e0e0e0;
+        }
+        .form-select:focus {
+            background-color: #3a3a3a;
+            border-color: #666;
+            color: #e0e0e0;
+        }
+    </style>
+
+    <title>Trading Platform</title>
+</head>
+<body>
+
+<div class="jumbotron text-center mt-3">
+    <h1>Trading Platform</h1>
+</div>
+
+<div class="container-lg">
+
+    <div class="row mt-3">
+        <div class="col-sm-3">
+            <div class="card">
+                <div class="card-header text-center">
+                    <strong>HCLTECH</strong>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center" id="HCLTECH">₹100</h5>
+                    <div class="row">
+                        <div class="col" align="left"><a href="#" class="btn btn-success" onclick="trade('HCLTECH', 'BUY')">Buy</a></div>
+                        <div class="col" align="right"><a href="#" class="btn btn-warning" onclick="trade('HCLTECH', 'SELL')">Sell</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card">
+                <div class="card-header text-center">
+                    <strong>TCS</strong>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center" id="TCS">₹100</h5>
+                    <div class="row">
+                        <div class="col" align="left"><a href="#" class="btn btn-success" onclick="trade('TCS', 'BUY')">Buy</a></div>
+                        <div class="col" align="right"><a href="#" class="btn btn-warning" onclick="trade('TCS', 'SELL')">Sell</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="card">
+                <div class="card-header text-center">
+                    <strong>INFOSYS</strong>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center" id="INFOSYS">₹100</h5>
+                    <div class="row">
+                        <div class="col" align="left"><a href="#" class="btn btn-success" onclick="trade('INFOSYS', 'BUY')">Buy</a></div>
+                        <div class="col" align="right"><a href="#" class="btn btn-warning" onclick="trade('INFOSYS', 'SELL')">Sell</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="card">
+                <div class="card-header text-center">
+                    <strong>ITC</strong>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center" id="ITC">₹100</h5>
+                    <div class="row">
+                        <div class="col" align="left"><a href="#" class="btn btn-success" onclick="trade('ITC', 'BUY')">Buy</a></div>
+                        <div class="col" align="right"><a href="#" class="btn btn-warning" onclick="trade('ITC', 'SELL')">Sell</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row mt-3">
+
+        <div class="col-sm-3">
+
+            <div class="card w-100">
+                <div class="card-header">
+                    Profile
+                </div>
+                <div class="card-body">
+                    <p><strong>Name:</strong> <span id="name">-</span></p>
+                    <p><strong>Email:</strong> <span id="email">-</span></p>
+                    <p><strong>Portfolio Balance:</strong> <span id="portfolioBalance">₹0</span></p>
+                    <p><strong>Available Balance:</strong> <span id="availableBalance">₹0</span></p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-sm-9">
+
+            <div class="card w-100">
+                <div class="card-header">
+                    Portfolio
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th scope="col">Ticker</th>
+                            <th scope="col">Quantity</th>
+                        </tr>
+                        </thead>
+                        <tbody id="portfolio">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header">
+                    Trade
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="ticker" class="form-label">Ticker</label>
+                            <select class="form-select" id="ticker" required>
+                                <option value="">Select a ticker</option>
+                                <option value="HCLTECH">HCLTECH</option>
+                                <option value="TCS">TCS</option>
+                                <option value="INFOSYS">INFOSYS</option>
+                                <option value="ITC">ITC</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="tradeAction" class="form-label">Action</label>
+                            <select class="form-select" id="tradeAction" required>
+                                <option value="">Select an action</option>
+                                <option value="BUY">BUY</option>
+                                <option value="SELL">SELL</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="quantity" class="form-label">Quantity</label>
+                            <input type="number" class="form-control" id="quantity" min="1" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="price" class="form-label">Price (₹)</label>
+                            <input type="number" class="form-control" id="price" step="0.01" required>
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="submitTrade()">Submit Trade</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="alerts"></div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9u94gFlUstIkGq6P14DgdoP5PTvxCLchSvq1ZfFg7D7Z8kWZDf2fefsI" crossorigin="anonymous"></script>
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const customerId = urlParams.get('customer');
+    const apiBaseUrl = 'http://localhost:8080/aggregator';
+
+    console.log("[v0] URL Search Params:", window.location.search);
+    console.log("[v0] Extracted customerId:", customerId);
+    console.log("[v0] API Base URL:", apiBaseUrl);
+
+    let stockPrices = {};
+    let customerPortfolioValue = {};
+
+    function formatCurrency(value) {
+        return new Intl.NumberFormat('en-IN', {
+            style: 'currency',
+            currency: 'INR',
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+        }).format(value);
+    }
+
+    function showAlert(message, type) {
+        const alertDiv = document.getElementById('alerts');
+        const alert = document.createElement('div');
+        alert.className = `alert alert-${type} alert-dismissible fade show`;
+        alert.innerHTML = `
+            ${message}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        `;
+        alertDiv.appendChild(alert);
+        setTimeout(() => alert.remove(), 5000);
+    }
+
+    function getStockPriceFromCache(ticker) {
+        return stockPrices[ticker] ? stockPrices[ticker] : 0;
+    }
+
+    function updateCustomerPortfolioDisplayValue() {
+        const sum = Object.values(customerPortfolioValue).reduce((acc, val) => acc + val, 0);
+        const portfolioElement = document.getElementById('portfolioBalance');
+        if (sum >= 10000) {
+            portfolioElement.innerHTML = `<span class="text-success">${formatCurrency(sum)}</span>`;
+        } else {
+            portfolioElement.innerHTML = `<span class="text-danger">${formatCurrency(sum)}</span>`;
+        }
+    }
+
+    function loadProfile() {
+        const profileUrl = `${apiBaseUrl}/${customerId}`;
+        console.log("[v0] Loading profile from:", profileUrl);
+
+        fetch(profileUrl)
+            .then(response => {
+                console.log("[v0] Profile response status:", response.status);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log("[v0] Profile data received:", data);
+                document.getElementById('name').textContent = data.name || '-';
+                document.getElementById('email').textContent = data.email || '-';
+                document.getElementById('availableBalance').textContent = formatCurrency(data.availableBalance || 0);
+
+                const portfolioTable = document.getElementById('portfolio');
+                portfolioTable.innerHTML = '';
+
+                (data.holdings || []).forEach((holding, index) => {
+                    const row = document.createElement('tr');
+                    const currentPrice = getStockPriceFromCache(holding.ticker);
+                    const currentValue = holding.quantity * currentPrice;
+                    row.innerHTML = `
+                        <td>${holding.ticker}</td>
+                        <td id="customer-quantity-${holding.ticker}">${holding.quantity}</td>
+                        <td id="customer-value-${holding.ticker}">${formatCurrency(currentValue)}</td>
+                    `;
+                    portfolioTable.appendChild(row);
+                });
+
+
+                document.getElementById('portfolioBalance').textContent = formatCurrency(data.portfolioBalance || 0);
+
+            })
+            .catch(error => {
+                console.error('[v0] Error loading profile:', error);
+                showAlert('Error loading profile: ' + error.message, 'danger');
+            });
+    }
+
+    function trade(ticker, action) {
+        const quantity = prompt(`Enter quantity for ${action} ${ticker}:`);
+        if (quantity && !isNaN(quantity) && quantity > 0) {
+            const price = getStockPriceFromCache(ticker);
+            submitTradeRequest(ticker, action, parseInt(quantity), price);
+        }
+    }
+
+    function submitTrade() {
+        const ticker = document.getElementById('ticker').value;
+        const tradeAction = document.getElementById('tradeAction').value;
+        const quantity = parseInt(document.getElementById('quantity').value);
+        const price = parseFloat(document.getElementById('price').value);
+
+        if (!ticker || !tradeAction || !quantity || !price) {
+            showAlert('Please fill all fields', 'danger');
+            return;
+        }
+
+        submitTradeRequest(ticker, tradeAction, quantity, price);
+    }
+
+    function submitTradeRequest(ticker, tradeAction, quantity, price) {
+        const tradeRequest = {
+            ticker: ticker,
+            tradeAction: tradeAction,
+            quantity: quantity,
+            price: price,
+            customerId: customerId
+        };
+
+        console.log("[v0] Submitting trade request:", tradeRequest);
+
+        fetch(`${apiBaseUrl}/${customerId}/trade`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(tradeRequest)
+        })
+            .then(response => {
+                console.log("[v0] Trade response status:", response.status);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log("[v0] Trade response data:", data);
+                showAlert(`Trade ${tradeAction} successful!`, 'success');
+                document.getElementById('ticker').value = '';
+                document.getElementById('tradeAction').value = '';
+                document.getElementById('quantity').value = '';
+                document.getElementById('price').value = '';
+                loadProfile();
+            })
+            .catch(error => {
+                console.error('[v0] Error submitting trade:', error);
+                showAlert('Error submitting trade: ' + error.message, 'danger');
+            });
+    }
+
+    function connectSSE() {
+        console.log("[v0] Connecting to SSE endpoint");
+        const eventSource = new EventSource(`${apiBaseUrl}/stocksPriceUpdate`);
+        eventSource.onmessage = function(event) {
+            const data = JSON.parse(event.data);
+            console.log("[v0] Stock price update received:", data);
+            const priceElement = document.getElementById(data.ticker);
+            if (priceElement) {
+                priceElement.textContent = formatCurrency(data.price);
+            }
+            stockPrices[data.ticker] = data.price;
+
+            // Update portfolio value for this holding if it exists
+            const customerQuantity = document.getElementById(`customer-quantity-${data.ticker}`);
+            if (customerQuantity) {
+                const q = parseInt(customerQuantity.innerText);
+                const newValue = q * data.price;
+                document.getElementById(`customer-value-${data.ticker}`).innerText = formatCurrency(newValue);
+                // customerPortfolioValue[data.ticker] = newValue;
+                // updateCustomerPortfolioDisplayValue();
+            }
+        };
+        eventSource.onerror = function() {
+            console.error('[v0] SSE connection error');
+            eventSource.close();
+            setTimeout(connectSSE, 5000);
+        };
+    }
+
+    // Initialize on page load
+    window.addEventListener('load', () => {
+        console.log("[v0] Page loaded, initializing...");
+        if (!customerId) {
+            showAlert('Customer ID not provided in URL. Use ?customer=YOUR_CUSTOMER_ID', 'danger');
+            return;
+        }
+        loadProfile();
+        connectSSE();
+    });
+</script>
+
+</body>
+</html>
